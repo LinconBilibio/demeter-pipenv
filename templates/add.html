@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <form>
+    <form action="/add" method="post">
         <div class="mb-2">
             <select class="custom-select">
                 <option selected disabled value="">Fornecedor...</option>
@@ -13,6 +13,29 @@
                     <option value="{{ seller }}">{{ seller }}</option>
                 {% endfor %}
             </select>
+        </div>
+        <div class="mb-2">
+            <input autocomplete="off" name="product_name" placeholder="Nome do produto" type="text">
+        </div>
+        <div class="mb-2">
+            <select class="custom-select">
+                <option selected disabled value="">Categoria...</option>
+                {% for product_type in types %}
+                    <option value="{{ product_type }}">{{ product_type }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-2">
+            <input autocomplete="off" name="product_quantity" placeholder="Quantidade" type="number">
+        </div>
+        <div class="mb-2">
+            <input autocomplete="off" name="unit_price" placeholder="Preço unitário" type="number">
+        </div>
+        <div class="mb-2">
+            <input autocomplete="off" name="date" placeholder="Data" type="date">
+        </div>
+        <div class="mb-2">
+            <button class="btn" type="submit">Adicionar produto</button>
         </div>
     </form>
 {% endblock %}
