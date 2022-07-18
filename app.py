@@ -46,6 +46,7 @@ def add():
             cur = conn.cursor()
 
             cur.execute("INSERT INTO purchases (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, user_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s);", (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, 1))
+            conn.commit()
 
             cur.close()
         except Exception as error:
