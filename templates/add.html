@@ -8,9 +8,9 @@
     <form>
         <div class="mb-2">
             <select class="custom-select">
-                <option selected disabled>Fornecedor...</option>
-                {% for seller in SELLERS %}
-                    <option>{{ seller }}</option>
+                <option selected disabled value="">Fornecedor...</option>
+                {% for seller in sellers %}
+                    <option value="{{ seller }}">{{ seller }}</option>
                 {% endfor %}
             </select>
         </div>

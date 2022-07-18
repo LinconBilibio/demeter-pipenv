@@ -62,4 +62,4 @@ def add():
     
     # GET
     else:
-        return render_template("add.html", PRODUCT_TYPES=PRODUCT_TYPES, SELLERS=SELLERS)
+        return render_template("add.html", PRODUCT_TYPES=PRODUCT_TYPES, sellers=SELLERS)
