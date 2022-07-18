@@ -45,7 +45,7 @@ def add():
             conn = psycopg2.connect(DATABASE_URL, sslmode="require")
             cur = conn.cursor()
 
-            cur.execute("INSERT INTO purchases (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, user_id) VALUES (%s, %s, %s, %i, %f, %s, %i);", (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, 1))
+            cur.execute("INSERT INTO purchases (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, user_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s);", (seller, product_name, product_type, product_quantity, unit_price, total_cost, date, 1))
 
             cur.close()
         except Exception as error:
