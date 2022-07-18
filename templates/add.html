@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Adicionar produto
+{% endblock %}
+
+{% block main %}
+    <form>
+        <div class="mb-2">
+            <select class="custom-select">
+                <option selected disabled>Fornecedor...</option>
+                {% for seller in SELLERS %}
+                    <option>seller</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+{% endblock %}
