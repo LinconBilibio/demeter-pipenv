@@ -33,9 +33,9 @@ def add():
     # POST
     if request.method == "POST":
         seller = request.form.get("seller")
-        product_name = request.form.get("name")
-        product_type = request.form.get("type")
-        product_quantity = int(request.form.get("quantity"))
+        product_name = request.form.get("product_name")
+        product_type = request.form.get("product_type")
+        product_quantity = int(request.form.get("product_quantity"))
         unit_price = float(request.form.get("unit_price"))
         total_cost = product_quantity * unit_price
         date = request.form.get("date")
