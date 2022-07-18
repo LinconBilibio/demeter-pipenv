@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/add" method="post">
         <div class="mb-2">
-            <select class="custom-select">
+            <select class="custom-select" name="seller">
                 <option selected disabled value="">Fornecedor...</option>
                 {% for seller in sellers %}
                     <option value="{{ seller }}">{{ seller }}</option>
@@ -18,7 +18,7 @@
             <input autocomplete="off" name="product_name" placeholder="Nome do produto" type="text">
         </div>
         <div class="mb-2">
-            <select class="custom-select">
+            <select class="custom-select" name="product_type">
                 <option selected disabled value="">Categoria...</option>
                 {% for product_type in types %}
                     <option value="{{ product_type }}">{{ product_type }}</option>
